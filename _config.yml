@@ -31,7 +31,7 @@ custom_file_path:
   #bodyEnd: source/_data/body-end.swig
   #variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
-  #style: source/_data/styles.styl
+  style: source/_data/styles.styl
 
 
 # ---------------------------------------------------------------
@@ -97,9 +97,9 @@ creative_commons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
-#scheme: Pisces
+scheme: Pisces
 #scheme: Gemini
 
 # Dark Mode
@@ -117,13 +117,14 @@ darkmode: false
 # External url should start with http:// or https://
 menu:
   home: / || fa fa-home
-  #about: /about/ || fa fa-user
-  #tags: /tags/ || fa fa-tags
-  #categories: /categories/ || fa fa-th
+  about: /about/ || fa fa-user
+  tags: /tags/ || fa fa-tags
+  categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
-  #schedule: /schedule/ || fa fa-calendar
-  #sitemap: /sitemap.xml || fa fa-sitemap
-  #commonweal: /404/ || fa fa-heartbeat
+  schedule: /schedule/ || fa fa-calendar
+  sitemap: /sitemap.xml || fa fa-sitemap
+  commonweal: /404/ || fa fa-heartbeat
+  photos: /photos || fas fa-camera-retro
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
@@ -138,8 +139,8 @@ menu_settings:
 
 sidebar:
   # Sidebar Position.
-  position: left
-  #position: right
+    #position: left
+  position: right
 
   # Manual define the sidebar width. If commented, will be default for:
   # Muse | Mist: 320
@@ -163,11 +164,11 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: #/images/avatar.gif
+  url: /images/avatar.jpg
   # If true, the avatar will be dispalyed in circle.
-  rounded: false
+  rounded: true
   # If true, the avatar will be rotated with the cursor.
-  rotated: false
+  rotated: true
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
@@ -177,16 +178,16 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  #GitHub: https://github.com/yourname || fab fa-github
-  #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
-  #Weibo: https://weibo.com/yourname || fab fa-weibo
-  #Google: https://plus.google.com/yourname || fab fa-google
-  #Twitter: https://twitter.com/yourname || fab fa-twitter
-  #FB Page: https://www.facebook.com/yourname || fab fa-facebook
-  #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
-  #YouTube: https://youtube.com/yourname || fab fa-youtube
-  #Instagram: https://instagram.com/yourname || fab fa-instagram
-  #Skype: skype:yourname?call|chat || fab fa-skype
+  GitHub: https://github.com/yourname || fab fa-github
+  E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+  Weibo: https://weibo.com/yourname || fab fa-weibo
+  Google: https://plus.google.com/yourname || fab fa-google
+  Twitter: https://twitter.com/yourname || fab fa-twitter
+  FB Page: https://www.facebook.com/yourname || fab fa-facebook
+  StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
+  YouTube: https://youtube.com/yourname || fab fa-youtube
+  Instagram: https://instagram.com/yourname || fab fa-instagram
+  Skype: skype:yourname?call|chat || fab fa-skype
 
 social_icons:
   enable: true
@@ -610,17 +611,17 @@ changyan:
 # Valine
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
-  enable: false
-  appid: # Your leancloud application appid
-  appkey: # Your leancloud application appkey
-  notify: false # Mail notifier
-  verify: false # Verification code
+  enable: true
+  appid: hqy7d9WxtqgEG5dYWsTA0Rf5-gzGzoHsz # Your leancloud application appid
+  appkey: IHzTrb3l5Ew2FqQ53I4ISpPV # Your leancloud application appkey
+  notify: true # Mail notifier
+  verify: true # Verification code
   placeholder: Just go go # Comment box placeholder
   avatar: mm # Gravatar style
   guest_info: nick,mail,link # Custom comment header
   pageSize: 10 # Pagination size
   language: # Language, available values: en, zh-cn
-  visitor: false # Article reading statistic
+  visitor: true # Article reading statistic
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
   recordIP: false # Whether to record the commenter IP
   serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
@@ -739,7 +740,7 @@ algolia_search:
 # Local Search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
-  enable: false
+  enable: true
   # If auto, trigger search by changing input.
   # If manual, trigger search by pressing enter key or search button.
   trigger: auto
@@ -856,13 +857,13 @@ three:
   enable: false
   three_waves: false
   canvas_lines: false
-  canvas_sphere: false
+  canvas_sphere: true
 
 # Canvas-ribbon
 # Dependencies: https://github.com/theme-next/theme-next-canvas-ribbon
 # For more information: https://github.com/zproo/canvas-ribbon
 canvas_ribbon:
-  enable: false
+  enable: true
   size: 300 # The width of the ribbon
   alpha: 0.6 # The transparency of the ribbon
   zIndex: -1 # The display level of the ribbon
@@ -879,7 +880,7 @@ canvas_ribbon:
 # Remember to use the https protocol of CDN files when you enable https on your site.
 vendors:
   # Internal path prefix.
-  _internal: lib
+  _internal: xxw
 
   # Internal version: 3.1.0
   # anime: //cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js
@@ -989,9 +990,33 @@ vendors:
 
   # Internal version: 1.0.0
   # canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js
-  canvas_ribbon:
+  canvas_ribbon: true
 
 # Assets
 css: css
 js: js
 images: images
+
+
+# Darkmode JS
+# For more information: https://github.com/rqh656418510/hexo-next-darkmode, https://github.com/sandoche/Darkmode.js
+darkmode_js:
+  enable: true
+  bottom: '64px' # default: '32px'
+  right: 'unset' # default: '32px'
+  left: '32px' # default: 'unset'
+  time: '0.5s' # default: '0.3s'
+  mixColor: 'transparent' # default: '#fff'
+  backgroundColor: 'transparent' # default: '#fff'
+  buttonColorDark: '#100f2c' # default: '#100f2c'
+  buttonColorLight: '#fff' # default: '#fff'
+  isActivated: true # default false
+  saveInCookies: false # default: true
+  label: '🌓' # default: ''
+  autoMatchOsTheme: false # default: true
+  libUrl: # Set custom library cdn url for Darkmode.js
+
+
+
+# Fireworks
+fireworks: true
